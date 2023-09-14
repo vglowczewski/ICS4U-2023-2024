@@ -7,26 +7,33 @@
     <style>
         .container{
             display:flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            flex-direction:row;
+            flex-wrap:wrap;
+            max-width: 640px;
         }
-        .flower{
+        .container img{
             height:200px;
             width:200px;
-            margin: 20px;
+            object-fit: cover;
+            margin: 5px;
+        }
+        .row{
+            display:flex;
+            flex-wrap:wrap;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="flower" src="images/flower1.jpg"></img>
-        <img class="flower" src="images/flower2.jpg"></img>
-        <img class="flower" src="images/flower3.jpg"></img>
-        <img class="flower" src="images/flower4.jpg"></img>
-        <img class="flower" src="images/flower5.jpg"></img>
-        <img class="flower" src="images/flower6.jpg"></img>
+        <div class="row">
+            <img src="images/flower1.jpg"></img>
+            <img src="images/flower2.jpg"></img>
+            <img src="images/flower3.jpg"></img>
+        </div>
+        <div class="row">
+            <img src="images/flower4.jpg"></img>
+            <img src="images/flower5.jpg"></img>
+            <img src="images/flower6.jpg"></img>
+        </div>
     </div>
 </body>
 </html>
