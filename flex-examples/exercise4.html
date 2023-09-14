@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4</title>
+    <style>
+        .card-container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .card{
+            width:250px;
+            height:300px;
+            text-align:center;
+            background-color: antiquewhite;
+            border: 1px solid darkgrey;
+        }
+        @media(max-width:768px){
+            .card-container{
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>
