@@ -6,3 +6,6 @@ I used grid layout in the services sections. In the code, I use "display: grid" 
 
 Flexbox:
 I used Flexbox to center the different content horizontally and vertically. Specifically, I implemented it for the welcome section. I made "welcome-content" my flex container by writing "display:flex". Then, I made flex-direction: column, so all the items could be stacked on top of each other. After I used "justify-content: center" and "align-items: center" so all the items would be centered in the welcome container. 
+
+Chat GPT:
+Chat GPT helped me identify small errors in my code. For example, I had made a typo when referencing the "styles.css" page in my HTML, so the web page wasn't displayed properly. I also used Chat GPT to understand how to implement a grid layout for the services. I learned how the service section acted as a grid container and the grid items were each an individual service. Lastly, Chat GPT helped me use the correct inputs for flexbox so I could display the welcome correctly. 
