@@ -1,0 +1,148 @@
+/* Reset some default browser styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Apply the updated color palette */
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: #f5f2e9; 
+	color: #333;
+	padding: 20px;
+}
+
+header {
+	background-color: #665544; /* Dark beige header background */
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+header h1 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333; /* Link color matches text color */
+	font-weight: bold;
+	font-size: 18px;
+	transition: color 0.3s;
+}
+
+nav a:hover {
+	color: #f5f2e9; /* Hover color matches header background */
+}
+
+main {
+	max-width: 1200px;
+	margin: 20px auto; /* Added more space between sections */
+	padding: 20px;
+}
+
+.welcome {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome img {
+    max-width: 100%;
+    height: auto;
+}
+
+.welcome h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.welcome p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+/* Adjusted text color for images */
+img {
+	max-width: 100%; /*Have it fill its container width*/
+	height: auto; /* Maintain aspect ratio */
+}
+
+/* Used grid layout to display the services (this is my grid container) */
+.services {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Make 3 equal columns*/
+	gap: 20px;
+}
+
+/* Style the individual grid items (i.e. the services) */
+.service {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+}
+
+.service h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.service p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+footer {
+	background-color: #665544;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+	header {
+    	padding: 10px;
+	}
+
+	nav li {
+    	margin-right: 10px;
+	}
+
+	main {
+    	padding: 10px;
+	}
+
+	/* Adjust grid layout for smaller screens */
+	.services {
+    	grid-template-columns: 1fr; /* Have the items stack in 1 column */
+	}
+}
+
+

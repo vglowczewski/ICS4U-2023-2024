@@ -1,0 +1,8 @@
+Design Choices: 
+I selected a clean font (Arial) to make sure the words are legible and the website appears professional. I decided on a set colour palette, using a range of beige, browns, and light greys to go for a neutral appearance. At the top, I made a navigation menu so users have easy access to important links and also added a hover state so the colour changes when the user moves to click it. Then, I made sure to have an image along with a header and description be part of each grid cell (the ".service" elements). 
+
+Grid Layout:
+I used grid layout in the services sections. In the code, I use "display: grid" to make ".services" my grid container and used "grid-template-columns: repeat (3,1fr)" to make 3 columns of equal width. Lastly, I used "gap: 20px" to make some space horizontally and vertically between the grid items. 
+
+Flexbox:
+I used Flexbox to center the different content horizontally and vertically. Specifically, I implemented it for the welcome section. I made "welcome-content" my flex container by writing "display:flex". Then, I made flex-direction: column, so all the items could be stacked on top of each other. After I used "justify-content: center" and "align-items: center" so all the items would be centered in the welcome container. 
