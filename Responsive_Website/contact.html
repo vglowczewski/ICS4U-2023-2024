@@ -6,61 +6,76 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact Us</title>
 	<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
-        <div class="brand">
-          <h1>Cacti Crate</h1>
-        </div>
-        <nav class="navbar">
+  <!-- Header with Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
+      
+      <!-- Regular navigation for larger screens -->
+      <div class="nav-links">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="subscribe.html">Subscribe</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
           </ul>
-        </nav>
-      </header>
+      </div>
+
+      <!-- Hamburger icon and sidebar navigation for smaller screens -->
+      <input type="checkbox" id="menuToggle">
+      <label class="menu-icon" for="menuToggle">&#9776;</label> <!-- This is the hamburger icon -->
+      <div class="navbar-content">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+          </ul>
+      </div>
+  </nav>
+  </header>
+
 
 	<!-- Contact Page Content -->
-	<main id="contact">
+	<main>
+		<section id="contact">
     	<h1>Reach Out to Us</h1>
     	<section class="contact-section">
-        	<div class="contact-form-container">
-            	<form class="contact-form">
-                	<label for="name">Name:</label>
-                	<input type="text" id="name" name="name" required>
-
-                	<label for="email">Email:</label>
-                	<input type="email" id="email" name="email" required>
-
-                	<label for="message">Message:</label>
-                	<textarea id="message" name="message" required></textarea>
-
-                	<button type="submit">Submit</button>
-            	</form>
-        	</div>
-
-        	<div class="contact-image-container">
-            	<img src="./img/about.jpg" alt="Contact Image">
+        	<div class="contact-form">
+            	<form action="">
+					<input type="text" placeholder="Enter your name" required>
+					<input type="email" placeholder="Enter your email" required>
+					<input type="text" placeholder="Enter your subject" required>
+					<textarea rows="8" placeholder="Message" required></textarea>
+					<button type="submit" class="contact-button">Send Message</button>
+				</form>
         	</div>
     	</section>
+	</section>
 	</main>
 
 <!-- Footer Section -->
 <footer>
-    <div class="footer-content">
-      <p class="copyright">&copy; 2023 Cacti Crate</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com"><img src="./img/facebook.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
-        <a href="https://www.instagram.com"><img src="./img/instagram.png" alt="Instagram"></a>
-      </div>
-    </div>
+	<div class="footer-content">
+	  <p class="copyright">&copy; 2023 Cacti Crate</p>
+	  <div class="social-links">
+		<a href="https://www.facebook.com"><img src="./img/facebook.png" alt="Facebook"></a>
+		<a href="https://twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
+		<a href="https://www.instagram.com"><img src="./img/instagram.png" alt="Instagram"></a>
+	  </div>
+	</div>
   </footer>
+
+	
 </body>
 </html>
 

@@ -5,107 +5,153 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Products</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="brand">
-          <h1>Cacti Crate</h1>
-        </div>
-        <nav class="navbar">
+    <!-- Header with Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
+      
+      <!-- Regular navigation for larger screens -->
+      <div class="nav-links">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="subscribe.html">Subscribe</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
           </ul>
-        </nav>
-      </header>
+      </div>
+
+      <!-- Hamburger icon and sidebar navigation for smaller screens -->
+      <input type="checkbox" id="menuToggle">
+      <label class="menu-icon" for="menuToggle">&#9776;</label> <!-- This is the hamburger icon -->
+      <div class="navbar-content">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+          </ul>
+      </div>
+  </nav>
+  </header>
+
 
 <main class="products-page">
+
+<!-- Product Header -->
+	<div class="product-header">
+		<h1>Shop Cacti</h1>
+		<p>browse our exciting new collection</p>
+	</div>
+  
     
 <div class="product-grid">
-
 	<!-- Product 1 -->
 	<div class="product">
     	<img src="./img/product1.jpg" alt="Product 1">
-    	<h3>Product Title 1</h3>
-    	<p>Product Description 1</p>
-    	<p class="price">$9.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 2 -->
 	<div class="product">
     	<img src="./img/product2.jpg" alt="Product 2">
-    	<h3>Product Title 2</h3>
-    	<p>Product Description 2</p>
-    	<p class="price">$12.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 3 -->
 	<div class="product">
     	<img src="./img/product3.jpg" alt="Product 3">
-    	<h3>Product Title 3</h3>
-    	<p>Product Description 3</p>
-    	<p class="price">$15.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 4 -->
 	<div class="product">
     	<img src="./img/product4.jpg" alt="Product 4">
-    	<h3>Product Title 4</h3>
-    	<p>Product Description 4</p>
-    	<p class="price">$11.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 5 -->
 	<div class="product">
     	<img src="./img/product5.jpg" alt="Product 5">
-    	<h3>Product Title 5</h3>
-    	<p>Product Description 5</p>
-    	<p class="price">$14.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 6 -->
 	<div class="product">
     	<img src="./img/product6.jpg" alt="Product 6">
-    	<h3>Product Title 6</h3>
-    	<p>Product Description 6</p>
-    	<p class="price">$18.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 7 -->
 	<div class="product">
     	<img src="./img/product7.jpg" alt="Product 7">
-    	<h3>Product Title 7</h3>
-    	<p>Product Description 7</p>
-    	<p class="price">$16.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 8 -->
 	<div class="product">
     	<img src="./img/product8.jpg" alt="Product 8">
-    	<h3>Product Title 8</h3>
-    	<p>Product Description 8</p>
-    	<p class="price">$19.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
 
 	<!-- Product 9 -->
 	<div class="product">
     	<img src="./img/product9.jpg" alt="Product 9">
-    	<h3>Product Title 9</h3>
-    	<p>Product Description 9</p>
-    	<p class="price">$20.99</p>
-    	<div class="add-to-cart">Add to cart</div>
+		<div class="product-info">
+			<h3>Succulent Pot</h3>
+			<p>Our best-selling item</p>
+			<p class="price">$9.99</p>
+			<div class="add-to-cart">Add to cart</div>
+		</div>
 	</div>
+
+	
 
 </div>
 </main>
