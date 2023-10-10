@@ -4,81 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Cacti Crate - About</title>
 </head>
 <body>
+
   <!-- Header with Navigation Bar -->
-  <header>
-	<div class="brand">
-  	<h1>Cacti Crate</h1>
-	</div>
-	<nav class="navbar">
-  	<ul>
-    	<li><a href="index.html">Home</a></li>
-    	<li><a href="products.html">Products</a></li>
-    	<li><a href="services.html">Services</a></li>
-    	<li><a href="about.html">About</a></li>
-    	<li><a href="subscribe.html">Subscribe</a></li>
-  	</ul>
-	</nav>
+   <header>
+    <nav class="navbar">
+      <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
+      
+      <!-- Regular navigation for larger screens -->
+      <div class="nav-links">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+          </ul>
+      </div>
+
+      <!-- Hamburger icon and sidebar navigation for smaller screens -->
+      <input type="checkbox" id="menuToggle">
+      <label class="menu-icon" for="menuToggle">&#9776;</label> <!-- This is the hamburger icon -->
+      <div class="navbar-content">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+          </ul>
+      </div>
+  </nav>
   </header>
 
   <!-- Main Content Section -->
   <main>
 	<!-- About Section -->
 	<section id="about">
-  	<div class="about-image">
-    	<img src="./img/about.jpg" alt="About Image">
-        <div class="image-title">Our Roots</div>
-  	</div>
-  	<div class="about-text">
-    	<h1 class="about-header">About</h1>
-    	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, dolores totam. Ad tempora rerum voluptates aspernatur architecto quas culpa, sed sit eum iusto dolore atque nulla exercitationem vero magnam commodi officia quos a? Quo, molestias. Cum veniam distinctio tenetur nam!</p>
-  	</div>
-	</section>
-
-	<!-- Cacti Crate Difference Section -->
-	<section id="difference">
-    <div class="difference-text">
-        <h1 class="difference-title">The Cacti Crate Difference</h1>
-        <ol class="difference-list">
-            <li>
-                First
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, blanditiis!</p>
-            </li>
-            <li>
-                Second
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, velit!</p>
-            </li>
-            <li>
-                Third
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quis?</p>
-            </li>
-        </ol>
-    </div>
-	</section>
-
-    <!--Story Section-->
-    <section id="story">
-        <div class="story-box">
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, inventore consequuntur. Esse ipsum recusandae nesciunt, voluptatibus porro qui nostrum assumenda aperiam magni enim, repellendus est aut placeat cumque impedit sint provident itaque sequi ipsam perspiciatis pariatur vero dolore officiis tempore! Reprehenderit esse eius dolorum amet illum, vel ea perferendis minima officia inventore nisi numquam, fugit veniam nulla dicta voluptas at cupiditate? Vitae ex aliquam, quis ab adipisci porro quasi eum tempora qui, reprehenderit harum deleniti error. Deserunt ea facilis dolor cupiditate veritatis velit incidunt enim! Error ipsa repellat hic cupiditate suscipit dolorum eveniet animi iure, asperiores officiis ipsam voluptatem voluptate!</p>
+        <div class="about-title">
+            <h1>About Us</h1>
         </div>
-    </section>
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Welcome to Cacti Crate</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, eius nemo voluptate optio necessitatibus placeat cupiditate fugiat voluptates suscipit asperiores magni nesciunt doloribus mollitia unde amet laborum exercitationem quo obcaecati quos praesentium repellat eaque est quisquam odit. Nihil, quaerat. Numquam exercitationem ab unde quibusdam, consequatur voluptates iste vitae illo officiis.</p>
+                <button class="about-button">Learn More</button>
+            </div>
+            <div class="about-img">
+                <img src="./img/about.jpg" alt="About">
+            </div>
+        </div>
+	</section>
+
+	<!-- Team Section -->
+
+  <section id="members">
+    <div class="member-title">
+      <h1>Our Team</h1>
+    </div>
+    <div class="member-container">
+      <div class="member">
+        <img src="./img/member1.jpg" alt="">
+        <h4>Emily Anderson</h4>
+        <p>Lead Botanist</p>
+      </div>
+      <div class="member">
+        <img src="./img/member2.jpg" alt="">
+        <h4>Jaden Kim</h4>
+        <p>Interior Designer</p>
+      </div>
+      <div class="member">
+        <img src="./img/member3.jpg" alt="">
+        <h4>Sophia Mitchell</h4>
+        <p>Cacti Support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="reach-out">
+    <div class="reach-out-content">
+       <a href="contact.html" class="reach-out-button">Reach Out</a>
+       <p class ="reach-out-message">We promise we don't prick.</p>
+     </div>
+   </section>
 
   </main>
 
-<!-- Footer Section -->
+  <!-- Footer Section -->
 <footer>
-    <div class="footer-content">
-      <p class="copyright">&copy; 2023 Cacti Crate</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com"><img src="./img/facebook.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
-        <a href="https://www.instagram.com"><img src="./img/instagram.png" alt="Instagram"></a>
-      </div>
+  <div class="footer-content">
+    <p class="copyright">&copy; 2023 Cacti Crate</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com"><img src="./img/facebook.png" alt="Facebook"></a>
+      <a href="https://twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com"><img src="./img/instagram.png" alt="Instagram"></a>
     </div>
-  </footer>
+  </div>
+</footer>
+
+
 </body>
 </html>
 

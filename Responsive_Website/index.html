@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Cacti Crate</title>
 </head>
 <body>
@@ -11,121 +14,109 @@
 
   <!-- Header with Navigation Bar -->
   <header>
-    <div class="brand">
-    <h1>Cacti Crate</h1>
-    </div>
     <nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="subscribe.html">Subscribe</a></li>
-    </ul>
-    </nav>
+      <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
+      
+      <!-- Regular navigation for larger screens -->
+      <div class="nav-links">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+          </ul>
+      </div>
+
+      <!-- Hamburger icon and sidebar navigation for smaller screens -->
+      <input type="checkbox" id="menuToggle">
+      <label class="menu-icon" for="menuToggle">&#9776;</label> <!-- This is the hamburger icon -->
+      <div class="navbar-content">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+          </ul>
+      </div>
+  </nav>
   </header>
 
 
-  <!-- Main Content Section -->
-  <main>
 <!-- Introductory Section -->
 <section id="intro">
   <div class="intro-content">
-	<div class="intro-image">
-  	<img src="./img/intro_image.jpg" alt="Intro Image">
-	</div>
-	<div class="intro-text">
   	<h2>Make any space</h2>
   	<span class="sharp-text">SHARP</span>
   	<p>cacti add a touch of green to your home</p>
   	<a href="products.html" class="shop-button">SHOP NOW</a>
-	</div>
   </div>
 </section>
 
-
-
-
-   
-    <!-- Welcome Section -->
-<section id="welcome">
+ <!-- Welcome Section -->
+ <section id="welcome">
   <div class="welcome-content">
     <div class="welcome-text">
     <h2 class="welcome-title">Welcome</h2>
-    <p class="welcome-text-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum reiciendis debitis vero at quasi rerum accusamus obcaecati, error magni ab dignissimos pariatur ea laboriosam alias ut voluptates inventore eligendi qui, temporibus quo quibusdam animi in facere. Odit aperiam adipisci unde. Fugit sapiente culpa nihil quae, nostrum quibusdam nulla in odit.
+    <div class="welcome-text-content">
+    <p>
+      At Cacti Crate, we're passionate about bringing the resilient beauty and unique charm of cacti into your space. Whether you're a seasoned cactus connoisseur or just stepping into the fascinating world of these desert gems, you've come to the right place. Discover an array of handpicked cacti, each with its own story to tell. From the whimsically twisted to the elegantly tall, our collection caters to every aesthetic and environment. Not just plants, our cacti are symbols of endurance, thriving in harsh conditions and yet standing tall with grace.
     </p>
+    <p> Looking to enhance your interior décor or gift someone a plant that's as rare and precious as they are? Dive into our curated selection. Need care tips or planting accessories? Our resources and products have got you covered.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!--Why Choose Us? Section-->
+<section id="why-choose-us">
+  <div class="why-choose-content">
+    <h2 class="why-choose-title">Why Choose Us?</h2>
+    <div class="icon">
+      <div class="icon-item">
+        <img src="./img/quality.png" alt="Quality Icon">
+        <p class="icon-text">Quality</p>
+        <p class="icon-description">Handpicked Excellence: Every cactus in our collection is chosen for its pristine quality, ensuring you get nature's finest.</p>
+      </div>
+      <div class="icon-item">
+        <img src="./img/care.png" alt="Care Icon">
+        <p class="icon-text">Care</p>
+        <p class="icon-description">Nurtured with Love: Our cacti are grown and cared for with utmost attention, ready to thrive in your space.</p>
+      </div>
+      <div class="icon-item">
+        <img src="./img/shipping.png" alt="Shipping Icon">
+        <p class="icon-text">Shipping</p>
+        <p class="icon-description">Safe & Swift Delivery: Our packaging ensures your cacti journey safely to your doorstep, no matter the distance.</p>
+      </div>
+      <div class="icon-item">
+        <img src="./img/support.png" alt="Support Icon">
+        <p class="icon-text">Support</p>
+        <p class="icon-description">Always Ready: From cactus care queries to order details, our dedicated team is here to assist and guide you every step of the way.</p>
+      </div>
     </div>
   </div>
 </section>
 
-
-
-
-    <!-- Why Choose Us Section -->
-<section id="why-choose-us">
-    <div class="why-choose-content">
-      <h2 class="why-choose-title">Why Choose Us?</h2>
-      <div class="icon-row">
-        <div class="icon-item">
-          <div class="icon">
-            <img src="./img/quality.png" alt="Quality Icon">
-          </div>
-          <p class="icon-text">Quality</p>
-          <p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon">
-            <img src="./img/care.png" alt="Care Icon">
-          </div>
-          <p class="icon-text">Care</p>
-          <p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon">
-            <img src="./img/shipping.png" alt="Shipping Icon">
-          </div>
-          <p class="icon-text">Shipping</p>
-          <p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon">
-            <img src="./img/support.png" alt="Support Icon">
-          </div>
-          <p class="icon-text">Support</p>
-          <p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-        </div>
-      </div>
+<!-- Contact Section -->
+  <section id="reach-out">
+   <div class="reach-out-content">
+      <a href="contact.html" class="reach-out-button">Reach Out</a>
+      <p class ="reach-out-message">We promise we don't prick.</p>
     </div>
   </section>
- 
-
-
-
-
-    <!-- Contact Section -->
-    <section id="contact">
-    <div class="contact-content">
-        <a href="contact.html" class="contact-button">Reach Out</a>
-        <p class ="contact-message">We promise we don't prick.</p>
-    </div>
-    </section>
-  </main>
-
 
 <!-- Footer Section -->
 <footer>
-    <div class="footer-content">
-      <p class="copyright">&copy; 2023 Cacti Crate</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com"><img src="./img/facebook.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
-        <a href="https://www.instagram.com"><img src="./img/instagram.png" alt="Instagram"></a>
-      </div>
+  <div class="footer-content">
+    <p class="copyright">&copy; 2023 Cacti Crate</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com"><img src="./img/facebook.png" alt="Facebook"></a>
+      <a href="https://twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com"><img src="./img/instagram.png" alt="Instagram"></a>
     </div>
-  </footer>
-  
-
+  </div>
+</footer>
 
 </body>
 </html>
