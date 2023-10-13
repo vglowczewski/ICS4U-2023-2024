@@ -4,12 +4,13 @@ body, h1, h2, p, ul {
     padding: 0;
   }
  
-  /* Basic styles */
+  /* Basic styles for body */
   body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0eada;
   }
 
+  /*Default font for button*/
   button{
     font-family: 'Montserrat', sans-serif;
   }
@@ -35,6 +36,7 @@ body, h1, h2, p, ul {
     width: 100px;
   }
 
+  /*Links appear on right side of the screen*/
   .nav-links {
     flex: 1;
     text-align: right;
@@ -55,6 +57,7 @@ body, h1, h2, p, ul {
     font-size: 14px;
   }
 
+  /*Set up the hover affect for nav links*/
   .nav-links ul li::after{
     content: '';
     width: 0%;
@@ -65,6 +68,7 @@ body, h1, h2, p, ul {
     transition: 0.5s;
   }
 
+  /*White underline forms during hover*/
   .nav-links ul li:hover::after{
     width: 100%;
   }
@@ -78,7 +82,7 @@ body, h1, h2, p, ul {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 2; /*hamburger icon appear above navbar-content bar*/
 }
 
 .navbar-content {
@@ -93,7 +97,7 @@ body, h1, h2, p, ul {
   right: 0;
   overflow-x: hidden;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 1; /*stack level*/
   padding-top: 120px;
 }
 
@@ -116,9 +120,9 @@ body, h1, h2, p, ul {
 
 .navbar-content ul li:hover::after{
   width: 100%;
-  color: #f0eada;
 }
 
+/*Have navbar links appear in one column*/
 .navbar-content ul {
   flex-direction: column;
 }
@@ -158,6 +162,7 @@ body, h1, h2, p, ul {
     text-transform: uppercase;
   }
 
+  /*separate formatting styles for the "SHARP"*/
   .sharp-text {
     font-size: 150px;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -177,7 +182,8 @@ body, h1, h2, p, ul {
     text-decoration: none;
     cursor: pointer;
   }
- 
+  
+  /*button turn darker green during hover*/
   .shop-button:hover {
     background-color: #4d533d;
   }
@@ -231,7 +237,8 @@ body, h1, h2, p, ul {
     text-align: center;
     margin-bottom: 20px; /* Adjust spacing between icon and text */
   }
- 
+  
+  /*create circular icons*/
   .icon-item img {
     border-radius: 50%;
     width: 100px;
@@ -239,10 +246,10 @@ body, h1, h2, p, ul {
   }
 
   .icon-text {
-    font-size: 18px; /* Font size for the text below each icon */
+    font-size: 18px; 
     font-weight: bold; /* Bold font for the text below each icon */
     color: #656d4f; 
-    margin-bottom: 10px; /* Add margin between the text and the icon */
+    margin-bottom: 10px;
     padding: 10px;
   }
  
@@ -254,19 +261,18 @@ body, h1, h2, p, ul {
 
   /* Footer section styles */
   footer {
-    background-color: #656d4f; /* Dark green background color */
-    color: #f0eada; /* White text color */
+    background-color: #656d4f; 
+    color: #f0eada; 
     padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
+  /*center the footer content*/
  .footer-content{
     display: flex;
     justify-content: center;
     align-items: center;
  }
+
   .copyright {
     margin: 0;
   }
@@ -276,12 +282,13 @@ body, h1, h2, p, ul {
     margin-left: 10px;
   }
  
+  /*Set sizes of social icons*/
   .social-links a img{
    width: 25px;
    height: 25px;
   }
 
-  /*Products Styling*/
+/*Products Styling*/
 .products-page body {
   background-color: #f0eada;
 }
@@ -298,6 +305,7 @@ body, h1, h2, p, ul {
   text-transform: uppercase;
 }
 
+/*Set up grid for products*/
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /*3 rows and 3 columns*/
@@ -307,6 +315,7 @@ body, h1, h2, p, ul {
   text-align: center;
 }
 
+/*Give product boxes shadow*/
 .product {
   background: transparent;
   box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.4);
@@ -333,6 +342,7 @@ body, h1, h2, p, ul {
   font-weight: bold;
 }
 
+/*Have no shadow on-top intially*/
 .product::before{
   border-radius: 10px;
   content: " ";
@@ -345,11 +355,13 @@ body, h1, h2, p, ul {
   transition: 0.3s;
 }
 
+/*Create light shadow on-top*/
 .product:hover::before {
   border-radius: 10px;
   background-color: rgba(0,0,0,0.2);
 }
 
+/*Set up add-to-cart button centered over the product*/
 .product .add-to-cart {
   display: none;
   position: absolute;
@@ -372,14 +384,15 @@ body, h1, h2, p, ul {
   transform: translateY(-3px);
 }
 
-.services{
+/*Services Styles*/
+#services{
   text-align: center;
   padding: 10px;
   margin: 10px;
   color:#5d4b32;
 }
 
-.services h1{
+#services h1{
   margin-bottom: 10px;
   font-size: 40px;
   text-transform: uppercase;
@@ -406,6 +419,7 @@ body, h1, h2, p, ul {
   margin: 10 0px;
 }
 
+/*Create shadow affect during hover*/
 .service-item:hover{
   box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
@@ -415,6 +429,7 @@ body, h1, h2, p, ul {
   height: 250px;
 }
 
+/*Support Styles (testimonials)*/
 .support {
   width: 80%;
   margin: auto;
@@ -464,6 +479,7 @@ body, h1, h2, p, ul {
   position: relative;
 }
 
+/*Center subscribe box in middle of webpage*/
 .form-box{
   width: 90%;
   max-width: 400px;
@@ -543,9 +559,9 @@ body, h1, h2, p, ul {
 /* Reach Out Section styles */
 #reach-out {
   background-image: url('./img/background.jpg');
-  background-size: cover; /* Ensure the image covers the entire area */
+  background-size: cover; /* Image must cover the entire area */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center 70%;
+  background-position: center 70%; /*Display proper part of image*/
   padding: 75px;
   color: #5d4b32; 
 }
@@ -557,14 +573,15 @@ body, h1, h2, p, ul {
 .reach-out-button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #5e4c1d; /* Dark green background color */
-  color: #f0eada; /* Beige text color */
+  background-color: #5e4c1d;
+  color: #f0eada; 
   text-decoration: none;
+  text-transform: uppercase;
   margin: 20px;
 }
 
 .reach-out-button:hover {
-  background-color: #4b3d19; /* Slightly darker shade of dark green for hover effect */
+  background-color: #4b3d19; /*Button will turn darker brown during hover*/
 }
 
 
@@ -575,24 +592,21 @@ body, h1, h2, p, ul {
   background-size: cover;
   text-align: center;
   padding: 10px;
-  height: 100vh;
+  height: 100vh;  /*Take up whole height of screen*/
   color:#656d4f;
 }
 
 #contact h1{
   font-size: 36px;
+  text-transform: uppercase;
 }
 
-.contact-section{
+.contact-form{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   color:#5e4c1d;
-}
-
-.contact-form textarea{
-  max-width: 100%;
 }
 
 .contact-form input {
@@ -602,14 +616,19 @@ body, h1, h2, p, ul {
   border: 1px solid #656d4f;
   box-sizing: border-box;
   height: 40px;
+  background-color: #f3f2f0;
+  border-radius: 3px;
 }
 
 .contact-form textarea {
+  max-width: 100%;
+  background-color: #f3f2f0;
   resize: none;
   width: 100%;
   margin-bottom: 17px;
   outline: none;
   border: 1px solid #656d4f;
+  border-radius: 3px;
   box-sizing: border-box;
 }
 
@@ -617,16 +636,18 @@ body, h1, h2, p, ul {
   display: inline-block;
   padding: 15px 30px;
   background-color: #5e4c1d;
-  color: #f0eada; /* Beige text color */
+  color: #f0eada; 
   text-decoration: none;
+  text-transform: uppercase;
   border: none;
   margin: 20px;
 }
 
 .contact-button:hover {
-  background-color: #4b3d19; /* Slightly darker shade of dark green for hover effect */
+  background-color: #4b3d19; 
 }
 
+/*About Section Styles*/
 #about {
   box-sizing: border-box;
 }
@@ -688,6 +709,7 @@ body, h1, h2, p, ul {
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
+  text-transform: uppercase;
 }
 
 .about-content button:hover{
@@ -695,6 +717,7 @@ body, h1, h2, p, ul {
   transform: scale(1.1);
 }
 
+/*Members Section Styles*/
 #members{
   background-color: #656d4f;
   color: #f0eada
@@ -729,22 +752,26 @@ body, h1, h2, p, ul {
   font-size: 15px;
 }
 
-  @media(max-width: 1200px){
+/*Responsive for medium screens*/
+@media(max-width: 1200px){
     #intro {
       background-position: center;
       justify-content: center;
       align-items:flex-start;
-      background-image: url('./img/desk.jpg');
     }
+
     .intro-content h2{
       font-size: 30px;
     }
+
     .sharp-text {
       font-size: 140px;
     }
+
     .intro-content p {
       font-size: 15px;
     }
+
     .reach-out-message{
       font-size: 13px;
     }
@@ -767,13 +794,12 @@ body, h1, h2, p, ul {
       margin: 0px;
       padding: 30px;
     }
-
+    
     .about-container{
       width: 100%;
       flex-direction: column;
       margin: 0px;
     }
-
     .about-content{
       width: 100%;
       margin: 35px;
@@ -786,30 +812,27 @@ body, h1, h2, p, ul {
     .about-content p{
       font-size: 18px;
       margin-bottom: 20px;
+      padding-right: 10px;
     }
-
-    .about-content button{
-      font-size: 16px;
-      padding: 8px 16px;
-    }
-
   }
 
-  @media(max-width: 768px){
-    .intro-content h2{
+/*Responsive for small screens*/
+@media(max-width: 768px){
+  .intro-content h2{
       font-size: 20px;
-    }
-    .sharp-text {
-      font-size: 100px;
-    }
+  }
 
-    .navbar {
+  .sharp-text {
+      font-size: 100px;
+  }
+
+  .navbar {
       position: relative;
-    }
+  }
 
   .menu-icon {
       display: block;
-    }
+  }
 
   .nav-links {
       display: none; /* hide the original navbar on small screens */
@@ -818,36 +841,61 @@ body, h1, h2, p, ul {
   .navbar-content{
     display: block;
   }
+
   .icon {
     display: flex;
     flex-direction: column;
   }
 
   .reach-out-message {
-    display:none;
+    display: none; /*Take out the message so no hard to read text over image*/
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);  /*Change product grid to have 2 columns*/
   }
-/*have services appear in a colum*/
+
   .service-row {
-    flex-direction: column;
+    flex-direction: column; /*Have services appear in a column*/
   }
 
   .form-box{
     width: 70%;
   }
 
+  .member-container{
+    flex-direction: column; /*List of team members appears in 1 column*/
+  }
+
+  .member img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+  
+  .member p{
+    font-size: 20px;
+  }
+
+  .member h4{
+    font-size: 25px;
+  }
+
+  /*Responsive for small phones*/
   @media(max-width: 500px){
     .product-grid {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);  
     }
     .product img {
       height: 300px;
     }
+    .about-title {
+      font-size: 35px;
+    }
+    .about-content h2{
+      font-size: 25px;
+    }
   }
-
 
 }
  
