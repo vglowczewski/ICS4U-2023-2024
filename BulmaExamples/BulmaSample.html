@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bulma Sample</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <style>
+        
         .navbar-item{
             color: black;
         }
 
+        .navbar{
+          width:100%;
+          padding-left: 50px;
+          border-top: 3px solid #0073e6;
+        }
+
+        .menu-list{
+          font-weight: bold;
+        }
+
+        .main-area{
+          padding-left: 60px;
+          padding-right: 60px;
+          background-color: rgb(249, 248, 248);
+        }
+
+        .hero{
+          background: linear-gradient(to right, #306ce4, #1ebce4);
+        }
+        
     </style>
   </head>
+
   <body>
-    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item">Bulma Admin</a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-                <strong>Home</strong>
-            </a>
-            <a class="navbar-item">
-                <strong>Orders</strong>
-            </a>
-            <a class="navbar-item">
-                <strong>Payments</strong>
-            </a>
-            <a class="navbar-item">
-                <strong>Exceptions</strong>
-            </a>
-            <a class="navbar-item">
-                <strong>Reports</strong>
-            </a>
+     <!-- START NAV -->
+     <nav class="navbar">
+          <div class="navbar-brand">
+              <a class="navbar-item brand" href="#">Bulma Admin</a>
+              <div class="navbar-burger burger" data-target="navMenu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
           </div>
-        </div>
-      </nav>
+          <div id="navMenu" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="#"><strong>Home</strong></a>
+                <a class="navbar-item" href="#"><strong>Orders</strong></a>
+                <a class="navbar-item" href="#"><strong>Payments</strong></a>
+                <a class="navbar-item" href="#"><strong>Exceptions</strong></a>
+                <a class="navbar-item" href="#"><strong>Reports</strong></a>
+              </div>
+      </div>
+    </nav>
 
     <!--Main Section-->
-    <section class="container has-background-light">
+      <section class="main-area">
         <div class="columns">
             <div class="column is-3">
                 <aside class="menu">
@@ -90,7 +101,7 @@
                   </aside>
             </div>
             
-            <div class="column">
+            <div class="column is-9">
                 <nav class="breadcrumb pt-3" aria-label="breadcrumbs">
                     <ul>
                       <li><a href="#">Bulma</a></li>
@@ -100,7 +111,7 @@
                     </ul>
                 </nav>
 
-                <section class="hero is-info is-small welcome mb-4">
+                <section class="hero is-small mb-4 is-info">
                     <div class="hero-body">
                       <div class=container>
                         <p class="title">
@@ -255,11 +266,11 @@
                     <div class="card-content">
                       <div class="content">
                           <div class="control has-icons-left has-icons-right">
-                              <input class="input is-medium" type="text" placeholder="">
-                              <span class="icon is-medium is-left">
+                              <input class="input is-large" type="text" placeholder="">
+                              <span class="icon is-large is-left">
                                 <i class="fa-solid fa-search"></i>
                               </span>
-                              <span class="icon is-medium is-right">
+                              <span class="icon is-large is-right">
                                 <i class="fa-solid fa-check"></i>
                               </span>
                           </div>
@@ -270,6 +281,7 @@
 
             </div>
           </div>
-    </section>
+        </div>
+      </section>
   </body>
 </html>
