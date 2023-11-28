@@ -13,7 +13,7 @@
      <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="home.html">
-            <img src="./img/NBA-logo.png" width="90" height="28">
+            <img src="./Images/NBA-logo.png" width="90" height="28">
           </a>
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -54,7 +54,7 @@
                 <a class="button is-info" href="signup.html">
                   <strong>Sign up</strong>
                 </a>
-                <a class="button is-light" href="signup.html">
+                <a class="button is-light" href="login.html">
                   Log in
                 </a>
               </div>
@@ -71,6 +71,7 @@
         <form id="scoreForm">
           <h1 class="subtitle is-4">Input Scores</h1>
           <div class="columns">
+              <!--Get Team1 Name-->
               <div class="column is-one-fifth">
                   <div class="field">
                       <label class="label" for="team1">Team 1:</label>
@@ -102,6 +103,7 @@
                       </div>
                   </div>
               </div>
+              <!--Get Team1 Score-->
               <div class="column is-one-fifth">
                   <div class="field">
                       <label class="label" for="team1Score">Score:</label>
@@ -110,6 +112,7 @@
                       </div>
                   </div>
               </div>
+              <!--Get Team2 Name-->
               <div class="column is-one-fifth">
                   <div class="field">
                       <label class="label" for="team2">Team 2:</label>
@@ -141,6 +144,7 @@
                       </div>
                   </div>
               </div>
+              <!--Get Team2 Score-->
               <div class="column is-one-fifth">
                   <div class="field">
                       <label class="label" for="team2Score">Score:</label>
@@ -149,6 +153,7 @@
                       </div>
                   </div>
               </div>
+              <!--Get Game Date-->
               <div class="column is-one-fifth">
                 <div class="field">
                   <label class="label" for="datepicker">Select Date:</label>
@@ -165,9 +170,10 @@
           </div>
       </form>
     
-        <!-- Additional input fields for filtering -->
+        <!-- Additional date fields for filtering -->
         <div class="mt-5 pt-4"></div>
         <h2 class="subtitle is-4">Filter by Date</h2>
+        <!--Get start date-->
         <div class="columns">
           <div class="column is-one-fifth">
               <div class="field">
@@ -177,7 +183,7 @@
                 </div>
                   </div>
               </div>
-          
+          <!--Get end date-->
           <div class="column is-one-fifth">
             <div class="field">
               <label class="label" for="endDate">End Date:</label>
@@ -188,6 +194,7 @@
         </div>
       </div>
 
+      <!--Buttons to filter by date and reset filter-->
       <div class="columns">
         <div class="column is-one-third">
           <button id="filterDateBtn" class = "button is-info">Filter Date</button>
@@ -199,7 +206,7 @@
         <div class="mt-5 pt-4"></div>
         <h2 class="subtitle is-4">Games</h2>
         <section id="gameCards" class="columns is-multiline card-container mt-5 mb-5">
-            
+          <!--Game cards added dynamically-->         
         </section>
         <!--Pagination-->
         <nav class="pagination is-centered" role="navigation" aria-label="pagination">
@@ -211,7 +218,7 @@
         <div class="mt-5 pt-4"></div>
       </div>
 
-          <!--Footer-->
+      <!--Footer-->
       <footer class="footer">
         <div class="content has-text-centered">
             <p><strong>National Basketball Association</strong></p>

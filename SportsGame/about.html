@@ -13,7 +13,7 @@
      <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="home.html">
-            <img src="./img/NBA-logo.png" width="90" height="28">
+            <img src="./Images/NBA-logo.png" width="90" height="28">
           </a>
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -54,7 +54,7 @@
                 <a class="button is-info" href="signup.html">
                   <strong>Sign up</strong>
                 </a>
-                <a class="button is-light" href="signup.html">
+                <a class="button is-light" href="login.html">
                   Log in
                 </a>
               </div>
@@ -73,7 +73,7 @@
       <div class="columns is-centered">
         <div class="column is-fullwidth">
           <figure class="image">
-            <img src="./img/NBA-about.png" alt="Main Image">
+            <img src="./Images/NBA-about.png" alt="Main Image">
           </figure>
         </div>
       </div>
@@ -107,9 +107,10 @@
   </footer>
   </div>
   <script>
+    //Hamburger Menu Functionality from Bulma
     document.addEventListener('DOMContentLoaded', () => {
 
-    // Get all "navbar-burger" elements - from Bulma
+    // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
     // Add a click event on each of them
@@ -123,7 +124,6 @@
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-
       });
     });
     });

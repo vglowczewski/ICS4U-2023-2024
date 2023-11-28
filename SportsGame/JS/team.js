@@ -4,9 +4,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const teamName = urlParams.get('name');
 document.getElementById('teamName').innerText = teamName;
 
+//Get ALL the data from local storage
 let data = JSON.parse(localStorage.getItem('scoreData')) || [];
+//Find games that include the current team's name
 let filteredData = data.filter((game) => game.team1 === teamName || game.team2 === teamName);
 
+//Function to build the individual cards
 function displayGames(games) {
     games.forEach((game) => {
         const card = document.createElement('div');
@@ -40,7 +43,8 @@ function displayGames(games) {
     });
 }
 
-displayGames(filteredData);
+  //Display all of the team's games
+  displayGames(filteredData);
 
 
  //To get Hamburger Menu

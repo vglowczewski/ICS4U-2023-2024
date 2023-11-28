@@ -11,7 +11,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="home.html">
-            <img src="./img/NBA-logo.png" width="90" height="28">
+            <img src="./Images/NBA-logo.png" width="90" height="28">
           </a>
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -51,7 +51,7 @@
                 <a class="button is-info" href="signup.html">
                   <strong>Sign up</strong>
                 </a>
-                <a class="button is-light" href="signup.html">
+                <a class="button is-light" href="login.html">
                   Log in
                 </a>
               </div>
@@ -63,10 +63,12 @@
     <!--Content-->
     <div class="container">
     <h1 class="title mt-5 mb-5 pt-4">NBA Game Standings</h1>
-
+    
+    <!--League and Division buttons-->
     <button id="league" class = "button is-info mt-2">League</button>
     <button id="division" class = "button mt-2">Division</button>
 
+    <!--League Table-->
     <div id="leagueTableContainer" class="table-container">
         <div class="pt-4"></div>
         <h2 class="subtitle is-4">League Standings</h2>
@@ -75,7 +77,7 @@
                 <tr>
                     <th id="ranking">Ranking</th>
                     <th id="teamName">Team Name</th>
-                    <th id="wins">Wins</th>
+                    <th id="wins" sorted-order="desc">Wins</th>
                     <th id="losses" sorted-order="asc">Losses</th>
                     <th id="wPercentage" sorted-order="desc">Win %</th>
                     <th id="played">Games Played</th>
@@ -88,6 +90,7 @@
         </table>
     </div>
 
+    <!--West Table-->
     <div id="westTableContainer" class="table-container hidden">
         <div class="pt-4"></div>
         <h2 class="subtitle is-4">West Standings</h2>
@@ -96,7 +99,7 @@
                 <tr>
                     <th id="rankingWest">Ranking</th>
                     <th id="teamNameWest">Team Name</th>
-                    <th id="winsWest">Wins</th>
+                    <th id="winsWest" sorted-order="desc">Wins</th>
                     <th id="lossesWest" sorted-order="asc">Losses</th>
                     <th id="wPercentageWest" sorted-order="desc">Win %</th>
                     <th id="playedWest">Games Played</th>
@@ -109,6 +112,7 @@
         </table>
     </div>
 
+    <!--East Table-->
     <div id="eastTableContainer" class="table-container hidden">
         <div class="pt-4"></div>
         <h2 class="subtitle is-4">East Standings</h2>
@@ -117,7 +121,7 @@
                 <tr>
                     <th id="rankingEast">Ranking</th>
                     <th id="teamNameEast">Team Name</th>
-                    <th id="winsEast">Wins</th>
+                    <th id="winsEast" sorted-order="desc">Wins</th>
                     <th id="lossesEast" sorted-order="asc">Losses</th>
                     <th id="wPercentageEast" sorted-order="desc">Win %</th>
                     <th id="playedEast">Games Played</th>

@@ -6,6 +6,7 @@
  // Check if local storage has existing scores
  let scoreData = JSON.parse(localStorage.getItem('scoreData')) || [];
 
+ //Get the proper standings from scoreData
  function getStandings(){
      let data = JSON.parse(localStorage.getItem('scoreData')) || [];
      const wins = {};
@@ -107,11 +108,13 @@
              divRank: 0,
          }
      })
+     //Call functions to determine value for rank and divRank
      setLeagueRanks(teamData);
      setDivisionRanks(teamData);
      return teamData;
  }
 
+ //Find which conference the header corresponds to
  function determineConference(element) {
      let conference = 'League'; // Default value if not specific to a conference
 
@@ -127,6 +130,7 @@
      return conference;
  }
 
+ //Add event listeners to the headers
  function addSortListeners() {
      const headers = document.querySelectorAll('th');
 
