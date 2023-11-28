@@ -5,7 +5,6 @@
 
  // Check if local storage has existing scores
  let scoreData = JSON.parse(localStorage.getItem('scoreData')) || [];
- console.log(scoreData)
 
  function getStandings(){
      let data = JSON.parse(localStorage.getItem('scoreData')) || [];
@@ -55,22 +54,23 @@
                  losses[game.team1] = 1;
              }
          }
-
+         //compute win percentage for team1 if they have won games
          if(wins[game.team1]){
-             wpercentage[game.team1] = (wins[game.team1]/played[game.team1]).toFixed(3);
+             wpercentage[game.team1] = (wins[game.team1]/played[game.team1]).toFixed(3); //round to 3
          } else {
              wpercentage[game.team1] = 0;
          }
 
-         //compute the win percentage if team has won a game
+         //compute win percentage for team2 if they have won games
          if(wins[game.team2]){
-             wpercentage[game.team2] = (wins[game.team2]/played[game.team2]).toFixed(3);
+             wpercentage[game.team2] = (wins[game.team2]/played[game.team2]).toFixed(3); //round to 3
          } else {
              wpercentage[game.team2] = 0;
          }
 
      })
 
+     //array of all teams
      const teams = [
          {name: "Celtics", division: "East"},
          {name: "Magic", division: "East"},
@@ -82,7 +82,7 @@
          {name: "Cavaliers", division: "East"},
          {name: "Hawks", division: "East"},
          {name: "Raptors", division: "East"},
-         {name: "Timerberwolves", division: "West"},
+         {name: "Timberwolves", division: "West"},
          {name: "Thunder", division: "West"},
          {name: "Mavericks", division: "West"},
          {name: "Suns", division: "West"},
@@ -93,7 +93,8 @@
          {name: "Clippers", division: "West"},
          {name: "Grizzlies", division: "West"},
          ];
-         
+    
+    //set the key-value pairs for each team
      const teamData = teams.map((team, index) =>{
          return {
              name: team.name,
@@ -108,7 +109,6 @@
      })
      setLeagueRanks(teamData);
      setDivisionRanks(teamData);
-     console.log(teamData)
      return teamData;
  }
 
@@ -141,7 +141,6 @@
                  }
              });
              sortByColumn(header.id, conference);
-             console.log(header.id)
          });
      });
  }
@@ -225,6 +224,7 @@ function sortByColumn(column, conference) {
 }
 
 
+//calculate team rank in the whole league
  function setLeagueRanks(teamData) {
      teamData.sort((a, b) => b.wpercentage - a.wpercentage);
      teamData.forEach((team, index) => {
@@ -232,6 +232,7 @@ function sortByColumn(column, conference) {
      });
  }
 
+//calculate team rank in the east/west division
  function setDivisionRanks(teamData) {
      const westTeams = teamData.filter(team => team.division === 'West');
      const eastTeams = teamData.filter(team => team.division === 'East');
@@ -242,12 +243,11 @@ function sortByColumn(column, conference) {
              team.divRank = index + 1;
          });
      };
-
      setRanks(westTeams);
      setRanks(eastTeams);
  }
 
-// Function to update ranks after adding a new game
+//Function to update ranks after adding a new game
 function updateRanksAfterGame(teamData, team1, team2, team1Score, team2Score) {
  const winner = team1Score > team2Score ? team1 : team2;
  teamData.find(team => team.name === winner).wins++;
@@ -257,7 +257,7 @@ function updateRanksAfterGame(teamData, team1, team2, team1Score, team2Score) {
  });
 }
 
-
+//Populate the league table
 function populateLeagueStandings(teamData, conference) {
  const tableBody = getTableBodyForConference(conference);
 
@@ -274,6 +274,7 @@ function populateLeagueStandings(teamData, conference) {
  });
 }
 
+//Get the table from HTML depending on conference
 function getTableBodyForConference(conference) {
  if (conference === 'West') {
      return document.getElementById('westStandingsBody');
@@ -298,6 +299,7 @@ function initializeStandings(conference) {
 }
 
 
+//If "League" button clicked
  league.addEventListener('click', () => {
      const leagueTableContainer = document.getElementById('leagueTableContainer');
      const westTableContainer = document.getElementById('westTableContainer');
@@ -310,6 +312,8 @@ function initializeStandings(conference) {
 
      initializeStandings('League')
  })
+
+ //If "Division" button clicked
  division.addEventListener('click', () => {
      const leagueTableContainer = document.getElementById('leagueTableContainer');
      const westTableContainer = document.getElementById('westTableContainer');
@@ -348,7 +352,6 @@ function initializeStandings(conference) {
   });
 
  // Initial list population
-
  initializeStandings('League');
  
  // Call the function to add event listeners on page load
