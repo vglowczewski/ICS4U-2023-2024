@@ -7,7 +7,7 @@ const events = ref(null)
  
 onMounted(() => {
   axios
-    .get('https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3/events')
+    .get('https://my-json-server.typicode.com/vglowczewski/ICS4U-2023-2024/events')
     .then((response) => {
       events.value = response.data
     })
