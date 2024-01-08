@@ -1,13 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import EventCard from '@/components/EventCard.vue'
-import axios from 'axios'
+import EventService from '@/services/EventService.js'
  
 const events = ref(null)
  
 onMounted(() => {
-  axios
-    .get('https://my-json-server.typicode.com/vglowczewski/ICS4U-2023-2024/events')
+  EventService.getEvents()
     .then((response) => {
       events.value = response.data
     })
@@ -16,14 +15,14 @@ onMounted(() => {
     })
 })
 </script>
-
+ 
 <template>
   <h1>Events For Good</h1>
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
-
+ 
 <style scoped>
 .events {
   display: flex;
@@ -31,3 +30,4 @@ onMounted(() => {
   align-items: center;
 }
 </style>
+
