@@ -13,6 +13,12 @@ let students = [
     { id: 3, name: 'Bob', age: 20},
 ];
 
+let courses = [
+    { id: 1, name: 'Introduction to Computer Science', instructor: 'John Smith'},
+    { id: 2, name: 'Web Development Fundamentals', instructor: 'Jane Doe'},
+    { id: 3, name: 'Database Systems', instructor: 'Bob Johnson'}
+];
+
 app.get('/api/students', (req, res) => {
     res.send(students);
 });
@@ -21,6 +27,10 @@ app.get('/api/students/:id', (req, res) => {
     const student = students.find(s => s.id === parseInt(req.params.id));
     if(!student) return res.status(404).send('Student not found.');
     res.send(student);
+});
+
+app.get('/api/courses', (req, res) => {
+    res.send(courses);
 });
 
 app.post('/api/students', (req, res) => {
