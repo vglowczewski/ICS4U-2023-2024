@@ -57,14 +57,14 @@
          }
          //compute win percentage for team1 if they have won games
          if(wins[game.team1]){
-             wpercentage[game.team1] = (wins[game.team1]/played[game.team1]).toFixed(3); //round to 3
+             wpercentage[game.team1] = (wins[game.team1]/played[game.team1]).toFixed(3)*100; //round to 3
          } else {
              wpercentage[game.team1] = 0;
          }
 
          //compute win percentage for team2 if they have won games
          if(wins[game.team2]){
-             wpercentage[game.team2] = (wins[game.team2]/played[game.team2]).toFixed(3); //round to 3
+             wpercentage[game.team2] = (wins[game.team2]/played[game.team2]).toFixed(3)*100; //round to 3
          } else {
              wpercentage[game.team2] = 0;
          }
